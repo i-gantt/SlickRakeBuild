@@ -1,0 +1,87 @@
+{
+    "sha": "61011100f8f69b8afe9c9fd3d73f3022d4f8c475",
+    "commit": {
+        "author": {
+            "name": "Cliff Burger",
+            "email": "cliff.burger@gmail.com",
+            "date": "2013-04-18T18:24:58Z"
+        },
+        "committer": {
+            "name": "Cliff Burger",
+            "email": "cliff.burger@gmail.com",
+            "date": "2013-04-18T18:24:58Z"
+        },
+        "message": "Stub prototype directory",
+        "tree": {
+            "sha": "aaf3723a08ebe39c71935bab5690bbb9f2c1dfa5",
+            "url": "https://api.github.com/repos/cliffburger/SlickRakeBuild/git/trees/aaf3723a08ebe39c71935bab5690bbb9f2c1dfa5"
+        },
+        "url": "https://api.github.com/repos/cliffburger/SlickRakeBuild/git/commits/61011100f8f69b8afe9c9fd3d73f3022d4f8c475",
+        "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/cliffburger/SlickRakeBuild/commits/61011100f8f69b8afe9c9fd3d73f3022d4f8c475",
+    "html_url": "https://github.com/cliffburger/SlickRakeBuild/commit/61011100f8f69b8afe9c9fd3d73f3022d4f8c475",
+    "comments_url": "https://api.github.com/repos/cliffburger/SlickRakeBuild/commits/61011100f8f69b8afe9c9fd3d73f3022d4f8c475/comments",
+    "author": {
+        "login": "cliffburger",
+        "id": 373637,
+        "avatar_url": "https://secure.gravatar.com/avatar/f63c24e38ad0187d966551ea7c4a9a44?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+        "gravatar_id": "f63c24e38ad0187d966551ea7c4a9a44",
+        "url": "https://api.github.com/users/cliffburger",
+        "html_url": "https://github.com/cliffburger",
+        "followers_url": "https://api.github.com/users/cliffburger/followers",
+        "following_url": "https://api.github.com/users/cliffburger/following",
+        "gists_url": "https://api.github.com/users/cliffburger/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/cliffburger/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/cliffburger/subscriptions",
+        "organizations_url": "https://api.github.com/users/cliffburger/orgs",
+        "repos_url": "https://api.github.com/users/cliffburger/repos",
+        "events_url": "https://api.github.com/users/cliffburger/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/cliffburger/received_events",
+        "type": "User"
+    },
+    "committer": {
+        "login": "cliffburger",
+        "id": 373637,
+        "avatar_url": "https://secure.gravatar.com/avatar/f63c24e38ad0187d966551ea7c4a9a44?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+        "gravatar_id": "f63c24e38ad0187d966551ea7c4a9a44",
+        "url": "https://api.github.com/users/cliffburger",
+        "html_url": "https://github.com/cliffburger",
+        "followers_url": "https://api.github.com/users/cliffburger/followers",
+        "following_url": "https://api.github.com/users/cliffburger/following",
+        "gists_url": "https://api.github.com/users/cliffburger/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/cliffburger/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/cliffburger/subscriptions",
+        "organizations_url": "https://api.github.com/users/cliffburger/orgs",
+        "repos_url": "https://api.github.com/users/cliffburger/repos",
+        "events_url": "https://api.github.com/users/cliffburger/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/cliffburger/received_events",
+        "type": "User"
+    },
+    "parents": [
+        {
+            "sha": "f80923d6897984a5790b746044e420c7c7dcda7c",
+            "url": "https://api.github.com/repos/cliffburger/SlickRakeBuild/commits/f80923d6897984a5790b746044e420c7c7dcda7c",
+            "html_url": "https://github.com/cliffburger/SlickRakeBuild/commit/f80923d6897984a5790b746044e420c7c7dcda7c"
+        }
+    ],
+    "stats": {
+        "total": 1,
+        "additions": 1,
+        "deletions": 0
+    },
+    "files": [
+        {
+            "sha": "d6b8bec4d5aedd091f2120b8948d90809da749ae",
+            "filename": "prototype/readme.md",
+            "status": "added",
+            "additions": 1,
+            "deletions": 0,
+            "changes": 1,
+            "blob_url": "https://github.com/cliffburger/SlickRakeBuild/blob/61011100f8f69b8afe9c9fd3d73f3022d4f8c475/prototype/readme.md",
+            "raw_url": "https://github.com/cliffburger/SlickRakeBuild/raw/61011100f8f69b8afe9c9fd3d73f3022d4f8c475/prototype/readme.md",
+            "contents_url": "https://api.github.com/repos/cliffburger/SlickRakeBuild/contents/prototype/readme.md?ref=61011100f8f69b8afe9c9fd3d73f3022d4f8c475",
+            "patch": "@@ -0,0 +1 @@\n+We'll create a prototype proving the point here."
+        }
+    ]
+}
