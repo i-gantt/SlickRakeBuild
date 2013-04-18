@@ -1,0 +1,31 @@
+# Set default behaviour, in case users don't have core.autocrlf set.
+*         text=auto
+
+# Explicitly declare text files we want to always be normalized and converted
+# to native line endings on checkout.
+*.cs      text diff=csharp
+*.js      text
+*.aspx    text
+*.ascx    text
+*.ashx    text
+*.asmx    text
+*.sql     text
+*.css     text
+*.scss    text
+*.sass    text
+*.resx    text
+*.xml     text
+*.xsd     text
+*.xsl     text
+*.xslt    text
+*.html    text
+*.htm     text
+*.cshtml  text
+*.rb      text
+*.vbs     text
+*.py      text
+*.proj    text
+*.ps1     text
+*.cmd     text
+*.md      text
+*.txt     text
