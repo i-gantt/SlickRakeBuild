@@ -1,4 +1,10 @@
 SlickRakeBuild
 ==============
 
-This is so slick! Run only builds relevant to changes! Developed for git and teamcity. 
+This is so slick! Run only builds relevant to changes! Developed for github and teamcity. Hypothetically, we could abstract the systems out. This approach could work given a typical commit (description + changed files) and a means to queue builds (either via api for immediate queuing, or output to a text file for subsequent execution).
+
+Why?
+====
+* A CI system building a product of moderate size quickly encounters resource constraints on the build system. Traditionally, we solve this by throwing money at the build system or reducing the number of builds. (Tax vs cut?). Let's make that smarter.
+* CI implementations implement build chains and triggers by configuration. This ties engineering process to a particular vendor, steals lollipops from children, and has no change control. Code is better than configuration.
+* Cause it's cool.
