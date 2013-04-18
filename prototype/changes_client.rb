@@ -1,5 +1,6 @@
-require 'git_changes_client'
-require 'commit'
+require_relative 'git_changes_client'
+require_relative 'commit'
+require_relative 'git_commit_mapper'
 require 'json'
 
 class ChangesClient

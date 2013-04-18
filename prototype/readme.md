@@ -1,1 +1,1 @@
-We'll create a prototype proving the point here.
+Prototypes to prove the point here.

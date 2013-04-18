@@ -1,7 +1,6 @@
-$: << File.dirname(__FILE__)
 require 'rspec'
-require 'changes_client'
-require 'commit'
+require_relative'changes_client'
+require_relative 'commit'
 
 describe 'Changes client' do
   let(:client) { ChangesClient.new() }

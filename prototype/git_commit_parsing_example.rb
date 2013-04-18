@@ -1,7 +1,6 @@
-$: << File.dirname(__FILE__)
-require 'changes_client'
-require 'git_changes_client'
-require 'commit'
+require_relative 'changes_client'
+require_relative 'git_changes_client'
+require_relative 'commit'
 
 commit_sha = '61011100f8f69b8afe9c9fd3d73f3022d4f8c475'
 puts GitChangesClient.new().get_commit(commit_sha).length
