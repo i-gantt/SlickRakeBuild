@@ -6,7 +6,7 @@ require 'uri'
 class TeamCityQueueBuild
 
   # Guest user credentials for unprivileged access
-  GUEST_USER = {:username => 'guest', :password => 'password'}
+  #GUEST_USER = {:username => 'guest', :password => 'password'}
 
   # Username and password for the privileged user in teamcity to add builds to queue
   #attr_accessor :username
@@ -37,17 +37,6 @@ class TeamCityQueueBuild
     end
   end
 
-  def get_build_info(build_type_id, build_count=1)
-    url= 'http://teamcity.hq.daptiv.com/httpAuth/app/rest/builds/'
-    locator="?locator=buildType:#{build_type_id},count:#{build_count},branch:#{get_branch()}"
-    uri=URI.parse "#{url}#{locator}"
-
-    result = RestClient::Request.new(
-        :method => :get, :url => uri.to_s, :user => @username, :password => @password,
-        :headers => { :accept => :json, :content_type => :json }).execute
-    JSON.parse result
-  end
-
   def get_branch
     branch = ENV['branch']
     return 'master' if branch.nil? || branch.length == 0
@@ -74,8 +63,8 @@ class TeamCityQueueBuild
   # Execute a web request
   def execute_get_web_request(path, guest=false)
     if guest
-      username=GUEST_USER[:username]
-      password=GUEST_USER[:password]
+      username='guest'
+      password='password'
     else
       username=@username
       password=@password
