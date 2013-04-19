@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'rspec/core/rake_task'
 
-task :default => [:bowling_spec, :cows_and_bulls_spec]
+task :default => [:bowling_spec, :cows_and_bulls_spec, :slick_spec]
 
 desc "Run the specs under bowling"
 RSpec::Core::RakeTask.new :bowling_spec do |t|
