@@ -1,4 +1,4 @@
-require 'commit'
+require_relative 'commit'
 
 class BuildMatchProcessor
   attr_reader :build_matchers

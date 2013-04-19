@@ -1,4 +1,4 @@
-require 'commit'
+require_relative 'commit'
 
 class BuildMatcher
   attr_accessor :build_ids

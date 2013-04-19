@@ -1,8 +1,6 @@
 require 'rubygems'
 require 'rspec/core/rake_task'
-require_relative 'prototype/build_evaluator'
-require_relative 'prototype/TeamCityQueueBuild'
-require_relative 'prototype/build_map'
+require_relative 'slick-build/lib/slick-build'
 
 task :default => [:bowling_spec, :cows_and_bulls_spec, :slick_spec]
 
