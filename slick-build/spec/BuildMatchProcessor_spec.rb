@@ -30,7 +30,13 @@ describe BuildMatchProcessor do
         specs.nil?.should == false
         first_spec = specs.first()
         first_spec.build_id.length.should > 1
-        #first_spec.commit.message.should = commit.message
+        first_spec.commit.message.should == commit.message
+      end
+
+      it 'should return unique build ids' do
+        specs = processor.get_build_specs(commit)
+        specs.nil?.should == false
+        specs.length.should == 2
       end
     end
   end
