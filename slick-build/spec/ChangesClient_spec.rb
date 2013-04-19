@@ -1,6 +1,4 @@
-require 'rspec'
-require_relative'changes_client'
-require_relative 'commit'
+require_relative 'spec_helper'
 
 describe 'Changes client' do
   let(:client) { ChangesClient.new() }
