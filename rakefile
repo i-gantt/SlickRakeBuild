@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'rspec/core/rake_task'
-require_relative 'slick-build/lib/slick-build'
+require_relative 'lib/slick-build/lib/slick-build'
 
 task :default => [:bowling_spec, :cows_and_bulls_spec, :slick_spec]
 
@@ -37,5 +37,6 @@ task :queue_relevant_builds do
   build_specs = BuildMatchProcessor.new(matchers).get_build_specs(commit)
 
   tc = TeamCityQueueBuild.new()
+
   tc.add_build_specs_to_queue(build_specs)
 end
