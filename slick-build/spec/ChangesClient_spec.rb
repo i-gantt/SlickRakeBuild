@@ -23,12 +23,12 @@ describe 'Changes client' do
     context 'where JSON contains files' do
       it 'should return have a file' do
         result = client.parse_commit_json commit_msg
-        result.files.length.should == 1
+        result.file_entries.length.should == 1
       end
 
       it 'the file should have a name' do
         result = client.parse_commit_json commit_msg
-        result.files[0]['filename'].should == 'prototype/readme.md'
+        result.file_entries[0]['filename'].should == 'prototype/readme.md'
       end
 
       it 'the resulting commit should return filenames in a friendly fashion' do

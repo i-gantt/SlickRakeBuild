@@ -1,20 +1,11 @@
 class Commit
-  attr_accessor :files, :message
+  attr_accessor :file_entries, :file_names, :message
 
   def initialize
-    @files = Array.new()
+    @file_entries = Array.new()
+    @file_names = Array.new()
     @message = ''
   end
 
-  def file_names
-    # TODO: if perf becomes a problem, create a parsed_file_cache, comparing the length with that of files.
-    # create a setter that does this, or do translation in the mapper.
-    parsed_files = []
-    @files.each do |f|
-      parsed_files << f['filename']
-    end
-
-    return parsed_files
-  end
 end
 

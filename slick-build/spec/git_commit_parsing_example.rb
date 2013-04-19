@@ -7,7 +7,7 @@ client = ChangesClient.new()
 commit = client.get_commit(commit_sha)
 
 puts "Message: #{commit.message}"
-puts "#{commit.files.length} files: "
+puts "#{commit.file_entries.length} files: "
 commit.files.each do |file|
   puts file['filename']
 end

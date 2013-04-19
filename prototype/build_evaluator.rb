@@ -6,7 +6,7 @@ module BuildEvaluator
     commit_info = changes_client.get_commit(commit_sha)
 
     puts commit_info
-    commit_info.files.each do |file|
+    commit_info.file_entries.each do |file|
       puts "Current file is: #{file['filename']}"
 
       res = Prototype::FILE_MATCH.include?(file['filename'])
