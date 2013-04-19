@@ -29,7 +29,8 @@ task :queue_relevant_builds do
   client = ChangesClient.new()
   commit = client.get_commit(commit_sha)
 
-  puts commit.file_names.join(';')
+  puts 'Files:'
+  puts commit.file_names.join("\n")
 
   #This is where a consumer could customize their build matchers
   matchers = BuildMatcherRegistry.new().get_matchers()
