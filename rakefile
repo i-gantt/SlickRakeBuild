@@ -15,8 +15,8 @@ RSpec::Core::RakeTask.new :cows_and_bulls_spec do |t|
   t.verbose = true
 end
 
-desc "Run the specs under prototype"
-RSpec::Core::RakeTask.new :prototype do |t|
-  t.pattern = ['prototype/**/*_spec.rb']
+desc "Run the specs under slick-build"
+RSpec::Core::RakeTask.new :slick_spec do |t|
+  t.pattern = ['slick-build/**/*_spec.rb']
   t.verbose = true
 end
