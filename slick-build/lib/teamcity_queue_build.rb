@@ -22,6 +22,13 @@ class TeamCityQueueBuild
 
   public
 
+  def add_build_specs_to_queue(build_specs)
+    build_specs.each do |spec|
+      puts "Build spec #{spec.build_id}"
+      add_build_to_queue(spec.build_id)
+    end
+  end
+
   # Add a build to the queue by build type id
   # Requires a valid user with permissions to execute.
   def add_build_to_queue(build_type_id)

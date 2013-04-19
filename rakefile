@@ -24,7 +24,17 @@ end
 
 desc 'Determine which build to run for this commit'
 task :queue_relevant_builds do
+  commit_sha = ENV['commit_sha']
+
+  client = ChangesClient.new()
+  commit = client.get_commit(commit_sha)
+
+  puts commit.file_names.join(';')
+
+  #This is where a consumer could customize their build matchers
+  matchers = BuildMatcherRegistry.new().get_matchers()
+  build_specs = BuildMatchProcessor.new(matchers).get_build_specs(commit)
+
   tc = TeamCityQueueBuild.new()
-  tc.add_build_to_queue(BuildMatcherRegistry::BowlingBuild)
-  tc.add_build_to_queue(BuildMatcherRegistry::CowBuild)
+  tc.add_build_specs_to_queue(build_specs)
 end

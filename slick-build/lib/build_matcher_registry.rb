@@ -11,17 +11,15 @@ class BuildMatcherRegistry
   end
 
   def bowling_matcher
-    create_pattern_matcher([BowlingBuild], 'bowling', '#bowling')
+    create_pattern_matcher(BowlingBuild, 'bowling', '#bowling')
   end
 
   def cows_and_bulls
-
-    create_pattern_matcher([CowBuild], 'cows_and_bulls', '#cows')
+    create_pattern_matcher(CowBuild, 'cows_and_bulls', '#cows')
   end
 
   def prototype
-
-    create_pattern_matcher([PrototypeBuild], 'prototype', '#prototype')
+    create_pattern_matcher(PrototypeBuild, 'prototype', '#prototype')
   end
 
   def create_pattern_matcher(build_ids, file_pattern, message_pattern = '')
