@@ -1,0 +1,5 @@
+require_relative 'commit'
+require_relative 'changes_client'
+require_relative 'git_commit_mapper'
+require_relative 'git_changes_client'
+require_relative 'git_changes_client'

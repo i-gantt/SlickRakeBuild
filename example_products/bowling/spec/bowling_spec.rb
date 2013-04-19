@@ -1,7 +1,8 @@
 require 'rspec'
+require_relative '../lib/bowling'
 
 describe 'Bowling' do
-  it 'should add a meaningful test' do
-    true.should == true
+  it 'Should start with a score of 0' do
+    Bowling.new().score.should == 0
   end
 end
