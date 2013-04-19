@@ -30,6 +30,12 @@ describe 'Changes client' do
         result = client.parse_commit_json commit_msg
         result.files[0]['filename'].should == 'prototype/readme.md'
       end
+
+      it 'the resulting commit should return filenames in a friendly fashion' do
+        result = client.parse_commit_json commit_msg
+        result.file_names.length.should == 1
+        result.file_names[0].should == 'prototype/readme.md'
+      end
     end
   end
 end
