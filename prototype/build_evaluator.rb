@@ -1,8 +1,4 @@
-require_relative 'changes_client'
-require_relative 'build_map'
-require_relative 'commit'
-require_relative 'changes_client'
-require_relative 'git_commit_mapper'
+require_relative '../slick-build/lib/slick-build'
 
 module BuildEvaluator
   def self.get_build_id(commit_sha)
@@ -15,17 +11,17 @@ module BuildEvaluator
 
       res = Prototype::FILE_MATCH.include?(file['filename'])
       puts "Result of looking for Prototype find is: #{res}"
-      exit
-        if BowlingMap::FILE_MATCH.find(file['filename'])
-          puts 'Should trigger Bowling Build'
-          return BowlingMap::BT_ID
-        elsif CowsAndBulls::FILE_MATCH.find(file['filename'])
-          puts 'Should trigger Cows and Bulls build'
-          return CowsAndBulls::BT_ID
-        elsif Prototype::FILE_MATCH.find(file['filename'])
-          puts 'Should trigger the Prototype build'
-          return Prototype::BT_ID
-        end
+
+      if BowlingMap::FILE_MATCH.find(file['filename'])
+        puts 'Should trigger Bowling Build'
+        return BowlingMap::BT_ID
+      elsif CowsAndBulls::FILE_MATCH.find(file['filename'])
+        puts 'Should trigger Cows and Bulls build'
+        return CowsAndBulls::BT_ID
+      elsif Prototype::FILE_MATCH.find(file['filename'])
+        puts 'Should trigger the Prototype build'
+        return Prototype::BT_ID
+      end
     end
 
   end
