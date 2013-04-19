@@ -14,7 +14,8 @@ class BuildMatchProcessor
       matcher.get_applicable_builds(commit)
     end
     flat_builds = builds.flat_map { |b| b }
-    return get_build_specs_from_ids(commit, flat_builds)
+    unique_builds = flat_builds.group_by { |b| b }.map { |k, v| k }
+    return get_build_specs_from_ids(commit, unique_builds)
   end
 
   def get_build_specs_from_ids(commit, build_ids)
