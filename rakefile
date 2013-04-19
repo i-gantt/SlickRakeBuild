@@ -25,6 +25,6 @@ end
 desc 'Determine which build to run for this commit'
 task :queue_relevant_builds do
   tc = TeamCityQueueBuild.new()
-  tc.add_build_to_queue(BowlingMap::BT_ID)
-  tc.add_build_to_queue(CowsAndBulls::BT_ID)
+  tc.add_build_to_queue(BuildMatcherRegistry::BowlingBuild)
+  tc.add_build_to_queue(BuildMatcherRegistry::CowBuild)
 end
