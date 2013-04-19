@@ -17,6 +17,8 @@ class TeamCityQueueBuild
     @username = TeamCityQueueBuild::load_var!('TC_USERNAME')
     @password = TeamCityQueueBuild::load_var!('TC_PASSWORD')
     @base_url = TeamCityQueueBuild::load_var!('TC_BASE_URL')
+    @branch = ENV['branch']
+    @branch = 'master' if @branch.nil? || @branch.length == 0
     #@commit_hash = load_var('TC_COMMIT_HASH')
   end
 
@@ -26,8 +28,8 @@ class TeamCityQueueBuild
   # Requires a valid user with permissions to execute.
   def add_build_to_queue(build_type_id)
     action = 'add2Queue'
-    path = "/httpAuth/action.html?#{action}=#{build_type_id}"
-    puts "Queue build #{build_type_id} with #{path}"
+    path = "/httpAuth/action.html?#{action}=#{build_type_id}&branchName=#{@branch}"
+    puts "Queue build #{build_type_id} on #{@branch} with #{path}"
     execute_get_web_request(path,false) #generate_request(path)
     puts 'Done with web request'
   end
