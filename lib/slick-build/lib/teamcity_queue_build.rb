@@ -6,7 +6,7 @@ require 'uri'
 class TeamCityQueueBuild
 
   # Guest user credentials for unprivileged access
-  GUEST_USER = {:username => 'guest', :password => 'password'}
+  #GUEST_USER = {:username => 'guest', :password => 'password'}
 
   # Username and password for the privileged user in teamcity to add builds to queue
   #attr_accessor :username
@@ -21,22 +21,20 @@ class TeamCityQueueBuild
   end
 
   public
-
-  def add_build_specs_to_queue(build_specs)
-    build_specs.each do |spec|
-      puts "Build spec #{spec.build_id}"
-      add_build_to_queue(spec.build_id)
-    end
-  end
-
   # Add a build to the queue by build type id
   # Requires a valid user with permissions to execute.
   def add_build_to_queue(build_type_id)
     action = 'add2Queue'
     path = "/httpAuth/action.html?#{action}=#{build_type_id}&branchName=#{get_branch()}"
     puts "Queue build #{build_type_id} on #{get_branch()} with #{path}"
+
     execute_get_web_request(path, false) #generate_request(path)
-    puts 'Done with web request'
+  end
+
+  def add_build_specs_to_queue(build_specs)
+    build_specs.each do |spec|
+      add_build_to_queue(spec.build_id)
+    end
   end
 
   def get_branch
@@ -65,8 +63,8 @@ class TeamCityQueueBuild
   # Execute a web request
   def execute_get_web_request(path, guest=false)
     if guest
-      username=GUEST_USER[:username]
-      password=GUEST_USER[:password]
+      username='guest'
+      password='password'
     else
       username=@username
       password=@password

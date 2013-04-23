@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'SlickRakeBuild'
+require 'slick-build'
+
+exec_slick_build
