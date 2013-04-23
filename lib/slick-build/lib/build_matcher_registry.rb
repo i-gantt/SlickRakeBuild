@@ -1,6 +1,5 @@
 require_relative 'build_matcher'
 
-#WARNING: I'm not complete. Please fix me.
 class BuildMatcherRegistry
   BowlingBuild = 'bt1597'
   CowBuild = 'bt1596'
